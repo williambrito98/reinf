@@ -1,0 +1,23 @@
+{
+    "pathChrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "userDataDir": "",
+    "software": {
+        "cnpj": "58119371000177",
+        "razao": "SOFTMATIC SISTEMAS AUTOMATICOS DE INFORMATICA LTDA",
+        "nome_contato": "Sergio Contente",
+        "telefone": "1129426700",
+        "email": "consultoriafiscal@contmatic.com.br"
+    },
+    "pathHtmlBaseCadastro": "src\\Support\\cadastro.html",
+    "contador": {
+        "cpf": "31259874826",
+        "nome": "EVERTON ROCHA DA SILVA",
+        "telefone": "1126852723",
+        "email": "contato@uphold.com.br"
+    },
+    "periodoApuracao": "10/2022",
+    "infoContato": {
+        "email": "contato@uphold.com.br",
+        "telefone": "1126852723"
+    }
+}
