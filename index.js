@@ -12,7 +12,7 @@ config.pathEntrada = join(__dirname, 'entrada');
 
 
 (async () => {
-    const clientes = parseXLSXToJson(config.pathEntrada)
+    let clientes = parseXLSXToJson(config.pathEntrada)
     //fs.writeFileSync('./erros.csv', 'cnpj;erro\n')
     //fs.rmSync(config.pathDownload, { force: true, recursive: true })
     //fs.mkdirSync(config.pathDownload)
