@@ -149,6 +149,13 @@ export async function geraEvento({ config, clientes }) {
         );
         throw new PageError(error);
       }
+
+      const alertMessageError = await frame
+        .$eval("#mensagensErrosGeral", (element) => element.style.display)
+        .catch((e) => "sem alert");
+      if (alertMessageError === "block") {
+        throw new Error("Erro a preencher as informações");
+      }
       console.log("esperando baixar o arquivo java");
       await waitForDownload(config.pathDownload);
       startJava = fs
@@ -191,8 +198,8 @@ export async function geraEvento({ config, clientes }) {
     };
   } catch (error) {
     console.log(error);
-    //const client = await page?.target()?.createCDPSession()
-    //await client?.send('Network.clearBrowserCookies')
+    //const client = await page?.target()?.createCDPSession();
+    //await client?.send("Network.clearBrowserCookies");
     await page?.close();
     await browser.close();
     if (error instanceof puppeteer.errors.TimeoutError) {
